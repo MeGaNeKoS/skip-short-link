@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         Reveal The Truth Link
+// @name         Get True link
 // @namespace    https://greasyfork.org/users/400139
 // @version      1.3.2
 // @description  Script to baypass most short link!! this script to auto decode short link when you got redirect link. save your time, save your money. any request / error put it in feedback
