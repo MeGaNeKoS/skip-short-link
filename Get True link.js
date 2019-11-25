@@ -15,7 +15,7 @@
 
 $('a').each(function(){
 	var aaa = this.href;
-	var aab = aaa.toString();
+	var aab = decodeURIComponent(aaa.toString());
 	var cp1 = aab.includes('aHR0');
 	var cp2 = aab.includes('http');
 	if (cp1 == true){
@@ -35,11 +35,11 @@ $('a').each(function(){
 		}
 	}else if (cp2 == true){
         	var cca = aab.split("http")[2]
-        	if (aaa.includes(cca) == true){
+        	if (aab.includes(cca) == true){
             		try {
                 		var ccb = aab.split("http")[1];
-               			 var ccc = aab.split(ccb)[1];
-               			 $(this).attr("href", ccc);
+               			var ccc = aab.split(ccb)[1];
+               			$(this).attr("href", ccc);
             		}catch(err) {
                 		$(this).attr("href", aaa);
             		}
