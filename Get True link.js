@@ -27,14 +27,14 @@ $('a').each(function(){
 				bbb = bbb.split('=')[0];
 			}
 			var bbd = atob(bbb);
-            var bbe = bbd.replace(/([_=:;&\-\/\.\?\d\w]+(\d|\w))/g,'')
-            var bbf = bbd.replace(bbe,'')
+            var bbe = bbd.replace(/([_=:;&\-\/\.\?\d\w]+(\d|\w))/g,'');
+            var bbf = bbd.replace(bbe,'');
 			$(this).attr("href", bbf);
 		}catch(err) {
 			$(this).attr("href", aaa);
 		}
 	}else if (cp2 == true){
-        	var cca = aab.split("http")[2]
+        	var cca = aab.split("http")[2];
         	if (aab.includes(cca) == true){
             		try {
                 		var ccb = aab.split("http")[1];
