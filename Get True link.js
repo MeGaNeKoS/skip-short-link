@@ -34,15 +34,15 @@ $('a').each(function(){
 			$(this).attr("href", aaa);
 		}
 	}else if (cp2 == true){
-        var cca = aab.split("http")[2]
-        if (aaa.includes(cca) == true){
-            try {
-                var ccb = aab.split("http")[1];
-                var ccc = aab.split(ccb)[1];
-                $(this).attr("href", ccc);
-            }catch(err) {
-                $(this).attr("href", aaa);
-            }
-        }
+        	var cca = aab.split("http")[2]
+        	if (aaa.includes(cca) == true){
+            		try {
+                		var ccb = aab.split("http")[1];
+               			 var ccc = aab.split(ccb)[1];
+               			 $(this).attr("href", ccc);
+            		}catch(err) {
+                		$(this).attr("href", aaa);
+            		}
+        	}
 	}
 });
