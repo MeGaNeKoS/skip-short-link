@@ -48,8 +48,6 @@ function decode(){
                     var ccc = aab.split(ccb)[1];
                     var ccd = ccc.split(/[^A-Za-z0-9_.:/\\]/g)[0];
                     $(this).attr("href", ccd);
-                    console.log("cole: )"+ccd)
-                    console.log("link: "+ccc)
                 }catch(err) {
                     $(this).attr("href", aaa);
                 }
