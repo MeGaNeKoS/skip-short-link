@@ -13,9 +13,14 @@
 // @require      https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js
 // ==/UserScript==
 
-$(document).load(function(){ decode(); });
-$(document).ready(function(){ decode(); });
-
+var trigger = 0;
+var myVar = setInterval(myTimer, 1000);
+function myTimer() {
+    trigger++;
+    console.log(trigger);
+    decode();
+    if(trigger > 60){clearInterval(myVar);}
+}
 function decode(){
     $('a').each(function(){
         var aaa = this.href;
