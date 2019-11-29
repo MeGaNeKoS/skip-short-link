@@ -46,8 +46,12 @@ function decode(){
                 try {
                     var ccb = aab.split("http")[1];
                     var ccc = aab.split(ccb)[1];
-                    var ccd = ccc.split(/[^A-Za-z0-9_.:/\\-]/g)[0];
-                    $(this).attr("href", ccd);
+                    if (aab.includes("google.com") == true){
+                        $(this).attr("href", ccc);
+                    }else{
+                        var ccd = ccc.split(/[^A-Za-z0-9_.:/\\-]/g)[0];
+                        $(this).attr("href", ccd);
+                    }
                 }catch(err) {
                     $(this).attr("href", aaa);
                 }
