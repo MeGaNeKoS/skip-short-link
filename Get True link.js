@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Get True link
 // @namespace    https://github.com/MeGaNeKoS/skip-short-link
-// @version      1.5.2
+// @version      1.5.3
 // @description  Script to baypass most short link!! this script to auto decode short link when you got redirect link. save your time, save your money. any request / error put it in feedback you can try on this web https://www.juragan-anime.net/series/boruto-naruto-next-generations-sub-indo/ https://anoboy.video/2019/11/boruto-episode-133/
 // @author       MeGaNeKo(めがねこ)
 // @match        *://*/*
@@ -32,19 +32,6 @@ function decode(){
                 $(this).attr("href", bbf);
             }catch(err) {
                 $(this).attr("href", aaa);
-            }
-        }else if (cp2 == true){
-            var cca = aab.split("http")[2];
-            if (aab.includes(cca) == true){
-                try {
-                    var ccb = aab.split("http")[1];
-                    var ccc = aab.split(ccb)[1];
-                    var ccd = ccc.split(/[^A-Za-z0-9_.:/\\-]/g)[0];
-                    $(this).attr("href", ccd);
-                }catch(err) {
-                    $(this).attr("href", aaa);
-                }
-
             }
         }
     });
